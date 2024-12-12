@@ -797,8 +797,45 @@ let arr = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 5
 console.log(arr);
 
 // 4.1. Tik skaičius (number tipo duomenis).
+
+for(let i = 0; i < arr.length; i++){
+    // console.log(arr[i])
+}
+
+arr.forEach(function(num){
+    // console.log('Original arr '+ num)
+})
+
+
+
 // 4.2. Tik tekstą (string tipo duomenis).
+
+// for(let i = 0; i < arr.length; i++){
+//     if(typeof(arr[i]) === 'string')
+//         console.log('These are strings of array Arr '+arr[i])
+// }
+
+arr.forEach(function(string){
+    if (typeof string === 'string'){
+        // console.log(string)
+    }
+})
+
 // 4.3. Tik skaičius (number tipo duomenis) ir juos pakelti 4-tuoju laipsniu.
+
+// for(let i = 0; i < arr.length; i++){
+//     let item = arr[i];
+//     if(typeof item === 'number'){
+//         console.log(item ** 4)
+//     }
+// }
+
+// arr.forEach(function(num){
+//     if (typeof num === 'number'){
+//         console.log(num ** 4)
+//     }
+// })
+
 // 4.4. Tik skaičius (number tipo duomenis) ir prie jų pridėti 55.
 // 4.5. Tik skaičius (number tipo duomenis) ir juos padalinti iš 2.
 // 4.6. Tik skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: "Number: 2".
