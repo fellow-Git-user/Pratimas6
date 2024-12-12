@@ -569,168 +569,222 @@
 //  console.log(last)
 
 
-let arr = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
+// let arr = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
+// console.log(arr);
 
 
+// // // 3.51. Gauti tik skaičius.
 
-// 3.51. Gauti tik skaičius.
-
-let onlyNumbers = arr.filter(function(num){
-    return typeof num === `number`
+// let onlyNumbers = arr.filter(function(num){
+//     return typeof num === `number`
    
-})
- console.log(onlyNumbers);
+// })
+//  console.log(onlyNumbers);
 
-// 3.52. Gauti tik tekstus (string).
+// // 3.52. Gauti tik tekstus (string).
 
-let onlyString = arr.filter(function(string){
-    return typeof string === 'string'
-})
-    console.log(onlyString);
+// let onlyString = arr.filter(function(string){
+//     return typeof string === 'string'
+// })
+//     console.log(onlyString);
 
-// 3.53. Gauti tik tekstus (string), kurie turi daugiau nei 5 simbolius.
+// // 3.53. Gauti tik tekstus (string), kurie turi daugiau nei 5 simbolius.
 
-let onlyTextsMoreThan5Symb = arr.filter(function(string){
-    return string.length > 5
-})
-    console.log(onlyTextsMoreThan5Symb)
-
-
-// 3.54. Gauti tik tekstus (string), kurie turi mažiau arba lygiai 5 simbolius.
-
-let onlyTextsMoreThanOrEqual5Symb = arr.filter(function(string){
-    return string.length <= 5;
-})
-    console.log(onlyTextsMoreThanOrEqual5Symb)
-
-// 3.55. Gauti tik tekstus (string), kurie turi mažiau nei 7 simbolius.
-
-let onlyTextsLessThan7Symb = arr.filter(function(string){
-    return string.length < 7;
-})
-    console.log(onlyTextsLessThan7Symb)
-
-// 3.56. Gauti tik tekstus (string), kurie turi raidę t.
-
-let onlyTextsHasT = arr.filter(function(string){
-    return typeof string === 'string' && string.includes('t');
-})
-    console.log(onlyTextsHasT)
-
-// 3.57. Gauti tik tekstus (string), kurie turi raidę y.
-
-let onlyTextsHasY = arr.filter(function(string){
-    return typeof string === 'string' && string.includes('y')
-})
-    console.log(onlyTextsHasY)
+// let onlyTextsMoreThan5Symb = arr.filter(function(string){
+//     return string.length > 5
+// })
+//     console.log(onlyTextsMoreThan5Symb)
 
 
-// 3.58. Gauti tik tekstus (string), kurie turi raides e arba a.
+// // 3.54. Gauti tik tekstus (string), kurie turi mažiau arba lygiai 5 simbolius.
 
-let onlyTextsHasEOrA = arr.filter(function(string){
-    return typeof string === 'string' && (string.includes('e') || string.includes('a'));
-})
-    console.log(onlyTextsHasEOrA)
+// let onlyTextsMoreThanOrEqual5Symb = arr.filter(function(string){
+//     return string.length <= 5;
+// })
+//     console.log(onlyTextsMoreThanOrEqual5Symb)
 
-// 3.59. Gauti tik tekstus (string), kurie turi raides t ir i.
+// // 3.55. Gauti tik tekstus (string), kurie turi mažiau nei 7 simbolius.
 
-let onlyTextsHasTAndI = arr.filter(function(string){
-    return typeof string === 'string' && string.includes('t') && string.includes('i');
-})
-    console.log(onlyTextsHasTAndI)
+// let onlyTextsLessThan7Symb = arr.filter(function(string){
+//     return string.length < 7;
+// })
+//     console.log(onlyTextsLessThan7Symb)
 
-// 3.60. Gauti tik tekstus (string), kurie turi raide t, bet neturi raidės k.
+// // 3.56. Gauti tik tekstus (string), kurie turi raidę t.
 
-let onlyTextsHasTNoK = arr.filter(function(string){
-    return typeof string === 'string' && string.includes('t') && !string.includes('k');
-})
-    console.log(onlyTextsHasTNoK)
+// let onlyTextsHasT = arr.filter(function(string){
+//     return typeof string === 'string' && string.includes('t');
+// })
+//     console.log(onlyTextsHasT)
 
-// 3.61. Gauti tik tekstus (string), kurie turi raide a, bet neturi raidės s.
+// // 3.57. Gauti tik tekstus (string), kurie turi raidę y.
 
-let onlyTextsHasANoS = arr.filter(function(string){
-    return typeof string === 'string' && string.includes('a') && !string.includes('s');
-})
-    console.log(onlyTextsHasANoS )
+// let onlyTextsHasY = arr.filter(function(string){
+//     return typeof string === 'string' && string.includes('y')
+// })
+//     console.log(onlyTextsHasY)
 
-// 3.62. Gauti tik tekstus (string), kurie turi daugiau nei vieną raidę t.
 
-let hasT = 't'
-let onlyTextsHasMoreT = arr.filter(function(string){
-    return typeof string === 'string' && ((string.indexOf(hasT) !== string.lastIndexOf(hasT)));
-})
-    console.log(onlyTextsHasMoreT)
-// 3.63. Gauti tik tekstus (string), kurie turi raidžių junginį st.
+// // 3.58. Gauti tik tekstus (string), kurie turi raides e arba a.
 
-let onlyTextsHasSt = arr.filter(function(string){
-    return typeof string === 'string' && string.includes('st');
-})
-    console.log(onlyTextsHasSt)
+// let onlyTextsHasEOrA = arr.filter(function(string){
+//     return typeof string === 'string' && (string.includes('e') || string.includes('a'));
+// })
+//     console.log(onlyTextsHasEOrA)
 
-// 3.64. Gauti tik tekstus (string), kurie turi raidžių junginį nd.
+// // 3.59. Gauti tik tekstus (string), kurie turi raides t ir i.
 
-let onlyTextsHasNd = arr.filter(function(string){
-    return typeof string === 'string' && string.includes('nd');
-})
-    console.log(onlyTextsHasNd)
-// 3.65. Gauti tik tekstus (string), kurie neturi raidės s.
+// let onlyTextsHasTAndI = arr.filter(function(string){
+//     return typeof string === 'string' && string.includes('t') && string.includes('i');
+// })
+//     console.log(onlyTextsHasTAndI)
 
-let onlyTextsHasNoS = arr.filter(function(string){
-    return typeof string === 'string' && !string.includes('s');
-})
-    console.log(onlyTextsHasNoS)
-// 3.66. Gauti tik tekstus (string), kurie neturi raidės t.
+// // 3.60. Gauti tik tekstus (string), kurie turi raide t, bet neturi raidės k.
 
-let onlyTextsHasNoT = arr.filter(function(string){
-    return typeof string === 'string' && !string.includes('t');
-})
-    console.log(onlyTextsHasNoT)
+// let onlyTextsHasTNoK = arr.filter(function(string){
+//     return typeof string === 'string' && string.includes('t') && !string.includes('k');
+// })
+//     console.log(onlyTextsHasTNoK)
 
-// 3.67. Gauti tik tekstus (string), kurie neturi raidės r ir l.
+// // 3.61. Gauti tik tekstus (string), kurie turi raide a, bet neturi raidės s.
 
-let onlyTextsHasNoRandL = arr.filter(function(string){
-    return typeof string === 'string' && (!string.includes('r') && !string.includes('l'));
-})
-    console.log(onlyTextsHasNoRandL)
+// let onlyTextsHasANoS = arr.filter(function(string){
+//     return typeof string === 'string' && string.includes('a') && !string.includes('s');
+// })
+//     console.log(onlyTextsHasANoS )
 
-// 3.68. Gauti tik tekstus (string), kurie prasideda skaičiumi.
+// // 3.62. Gauti tik tekstus (string), kurie turi daugiau nei vieną raidę t.
 
-let onlyTextsStartNumber = arr.filter(function(string){
-    return typeof string === 'string' && (string.charAt(0) == isNaN());
-})
-    console.log(onlyTextsStartNumber)
+// let hasT = 't'
+// let onlyTextsHasMoreT = arr.filter(function(string){
+//     return typeof string === 'string' && ((string.indexOf(hasT) !== string.lastIndexOf(hasT)));
+// })
+//     console.log(onlyTextsHasMoreT)
+// // 3.63. Gauti tik tekstus (string), kurie turi raidžių junginį st.
 
-// 3.69. Gauti tik tekstus (string), kurie prasideda raide s.
+// let onlyTextsHasSt = arr.filter(function(string){
+//     return typeof string === 'string' && string.includes('st');
+// })
+//     console.log(onlyTextsHasSt)
 
-let onlyTextsStartS = arr.filter(function(string){
-    return typeof string === 'string' && (string.charAt(0) === 's');
-})
-    console.log(onlyTextsStartS)
+// // 3.64. Gauti tik tekstus (string), kurie turi raidžių junginį nd.
 
-// 3.70. Gauti tik tekstus (string), kurie prasideda raide o.
+// let onlyTextsHasNd = arr.filter(function(string){
+//     return typeof string === 'string' && string.includes('nd');
+// })
+//     console.log(onlyTextsHasNd)
+// // 3.65. Gauti tik tekstus (string), kurie neturi raidės s.
 
-let onlyTextsStartO = arr.filter(function(string){
-    return typeof string === 'string' && (string.charAt(0) === 'o');
-})
-    console.log(onlyTextsStartO)
-// 3.71. Gauti tik tekstus (string), kurie baigiasi raide d.
+// let onlyTextsHasNoS = arr.filter(function(string){
+//     return typeof string === 'string' && !string.includes('s');
+// })
+//     console.log(onlyTextsHasNoS)
+// // 3.66. Gauti tik tekstus (string), kurie neturi raidės t.
 
-let onlyTextsEndD = arr.filter(function(string){
-    return typeof string === 'string' && (string.charAt(string.length - 1) === 'd');
-})
-    console.log(onlyTextsEndD)
+// let onlyTextsHasNoT = arr.filter(function(string){
+//     return typeof string === 'string' && !string.includes('t');
+// })
+//     console.log(onlyTextsHasNoT)
 
-// 3.72. Gauti tik tekstus (string), kurie baigiasi raide s.
+// // 3.67. Gauti tik tekstus (string), kurie neturi raidės r ir l.
+
+// let onlyTextsHasNoRandL = arr.filter(function(string){
+//     return typeof string === 'string' && (!string.includes('r') && !string.includes('l'));
+// })
+//     console.log(onlyTextsHasNoRandL)
+
+// // 3.68. Gauti tik tekstus (string), kurie prasideda skaičiumi.
+
+// let onlyTextsStartNumber = arr.filter(function(string){
+//     return typeof string === 'string' && (string.charAt(0) == isNaN());
+// })
+//     console.log(onlyTextsStartNumber)
+
+// // 3.69. Gauti tik tekstus (string), kurie prasideda raide s.
+
+// let onlyTextsStartS = arr.filter(function(string){
+//     return typeof string === 'string' && (string.charAt(0) === 's');
+// })
+//     console.log(onlyTextsStartS)
+
+// // 3.70. Gauti tik tekstus (string), kurie prasideda raide o.
+
+// let onlyTextsStartO = arr.filter(function(string){
+//     return typeof string === 'string' && (string.charAt(0) === 'o');
+// })
+//     console.log(onlyTextsStartO)
+// // 3.71. Gauti tik tekstus (string), kurie baigiasi raide d.
+
+// let onlyTextsEndD = arr.filter(function(string){
+//     return typeof string === 'string' && (string.charAt(string.length - 1) === 'd');
+// })
+//     console.log(onlyTextsEndD)
+
+// // 3.72. Gauti tik tekstus (string), kurie baigiasi raide s.
+
+// let onlyTextsEndS = arr.filter(function(string){
+//     return typeof string === 'string' && (string.charAt(string.length - 1) === 's');
+// })
+//     console.log(onlyTextsEndS)
+
 // 3.73. Gauti tik tekstus (string), kurie turi daugiau nei 4 simbolius ir turi raidę o.
-// 3.74. Gauti tik tekstus (string), kurie turi daugiau arba lygiai 5 simbolius ir turi raidę a.
-// 3.75. Gauti tik tekstus (string), kurie turi porinį simbolių skaičių.
-// 3.76. Gauti tik tekstus (string), kurie turi neporinį simbolių skaičių ir turi raidę s.
-// 3.77. Gauti tik tekstus (string), kurių trečias simbolis yra a.
-// 3.78. Gauti tik tekstus (string), kurių ketvirtas simbolis yra l.
-// 3.79. Gauti tik tekstus (string), kurių penktas simbolis nėra t ir kurie turi daugiau simbolių nei 4.
-// 3.80. Gauti tik tekstus (string), kurių pirmas simbolis nėra e, kurie turi mažiau simbolių nei 6 ir kurie neprasideda skaičiumi.
+
+// let onlyTextsMore4HasO = arr.filter(function(string){
+//     return typeof string === 'string' && (string.length > 4 && string.includes('o'));
+// })
+//     console.log(onlyTextsMore4HasO)
+
+// // 3.74. Gauti tik tekstus (string), kurie turi daugiau arba lygiai 5 simbolius ir turi raidę a.
+// let onlyTextsMore5HasA = arr.filter(function(string){
+//     return typeof string === 'string' && (string.length >= 5 && string.includes('a'));
+// })
+//     console.log(onlyTextsMore5HasA)
 
 
+// // 3.75. Gauti tik tekstus (string), kurie turi porinį simbolių skaičių.
+
+// let onlyTextsCouple = arr.filter(function(string){
+//     return typeof string === 'string' && string.length % 2 === 0;
+// })
+//     console.log(onlyTextsCouple)
+
+// // 3.76. Gauti tik tekstus (string), kurie turi neporinį simbolių skaičių ir turi raidę s.
+
+// let onlyTextsCoupleHasS = arr.filter(function(string){
+//     return typeof string === 'string' && string.length % 2 !== 0 && string.includes('s');
+// })
+//     console.log(onlyTextsCoupleHasS)
+
+// // 3.77. Gauti tik tekstus (string), kurių trečias simbolis yra a.
+
+// let onlyTextsThirdA = arr.filter(function(string){
+//     return typeof string === 'string' && (string.charAt(2) === 'a');
+// })
+//     console.log(onlyTextsThirdA)
+
+// // 3.78. Gauti tik tekstus (string), kurių ketvirtas simbolis yra l.
+
+// let onlyTextsFourthL = arr.filter(function(string){
+//     return typeof string === 'string' && (string.charAt(3) === 'l');
+// })
+//     console.log(onlyTextsFourthL)
+
+// // // 3.79. Gauti tik tekstus (string), kurių penktas simbolis nėra t ir 
+// // kurie turi daugiau simbolių nei 4.
+
+// let onlyTextsFifthNotTAndMoreThan4 = arr.filter(function(string){
+//     return typeof string === 'string' && (string.charAt(4) !== 't' && string.length > 4);
+// })
+//     console.log(onlyTextsFifthNotTAndMoreThan4)
+
+// // // 3.80. Gauti tik tekstus (string), kurių pirmas simbolis nėra e,
+// //  kurie turi mažiau simbolių nei 6 ir kurie neprasideda skaičiumi.
+
+
+// let last = arr.filter(function(string){
+//     return typeof string === 'string' && (string.charAt(0) !== 'e' && string.length < 6 && string.charAt(0) != isNaN());
+// })
+//     console.log(last)
 
 
 
@@ -738,6 +792,9 @@ let onlyTextsEndD = arr.filter(function(string){
 // naudojant for ciklą ir map/forEach metodą. Kiekvieną užduotį
 //  atlikti abiem būdais (for ciklu ir map/forEach metodu).
 //   Visus narius išvesti į konsole pagal žemiau pateiktas sąlygas:
+
+let arr = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
+console.log(arr);
 
 // 4.1. Tik skaičius (number tipo duomenis).
 // 4.2. Tik tekstą (string tipo duomenis).
