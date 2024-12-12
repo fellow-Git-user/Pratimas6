@@ -837,14 +837,86 @@ arr.forEach(function(string){
 // })
 
 // 4.4. Tik skaičius (number tipo duomenis) ir prie jų pridėti 55.
+
+// for(let i = 0; i < arr.length; i++){
+//     if (typeof arr[i] === 'number'){
+//         console.log(arr[i] + 55)
+//     }
+// }
+
+// arr.forEach(function(num){
+//     if(typeof num === 'number'){
+//         console.log(num + 55)
+//     }
+// })
+
 // 4.5. Tik skaičius (number tipo duomenis) ir juos padalinti iš 2.
+
+// for(let i = 0; i < arr.length; i++){
+//     if (typeof arr[i] === 'number'){
+//         console.log(arr[i] / 2)
+//     }
+// }
+
+// arr.forEach(function(num){
+//     if(typeof num === 'number'){
+//         console.log(num / 2)
+//     }
+// })
+
 // 4.6. Tik skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: "Number: 2".
+
+// for(let i = 0; i < arr.length; i++){
+//     if (typeof arr[i] === 'number'){
+//         console.log("Number " +arr[i])
+//     }
+// }
+
+// arr.forEach(function(num){
+//     if(typeof num === 'number'){
+//         console.log(`Number `+num)
+//     }
+// })
+
 // 4.7. Tik skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais, pvz.:
 //   "Index: 0, Number: 2"
 //   "Index: 1, Number: 3"
 //   "Index: 2, Number: 5"
 //   Ir t.t.
+
+// for(let i = 0; i < arr.length; i++){
+//     let item = arr[i];
+//     if (typeof arr[i] === 'number'){
+//         console.log("index " + i)
+//         console.log("Number " +arr[i])
+//     }
+// }
+
+// arr.forEach(function(num, index){
+//     if(typeof num === 'number'){
+//         console.log(`Index `+index)
+//         console.log(`Number `+num)
+//     }
+// })
+
+
 // 4.8. Tik skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso.
+
+// for(let i = 0; i < arr.length; i++){
+//     let item = arr[i];
+//     if (typeof arr[i] === 'number'){
+//         console.log("index " + i)
+//         console.log("Number " +arr[i] * i)
+//     }
+// }
+
+// arr.forEach(function(num, index){
+//     if(typeof num === 'number'){
+//         console.log(`Index `+index)
+//         console.log(`Number `+num * index)
+//     }
+// })
+
 // 4.9. Tik skaičius (number tipo duomenis) ir juos padauginti iš ankstesnio nario, pvz.:
 //   - Pirmo skaičiaus dauginti nereikia.
 //   - Antrą skaičių dauginti iš pirmo.
@@ -852,8 +924,50 @@ arr.forEach(function(string){
 //   - Ketvirta skaičių dauginti iš trečio.
 //   - Penktą skaičių dauginti iš ketvirto.
 //   Ir t.t.
-// 4.10. Tik tuos skaičius (number tipo duomenis), kuriuos padauginus iš 5, atsakymas gaunasi didesnis už 350.
+
+// for(let i = 0; i < arr.length; i++){
+//         let item = arr[i];
+//         if (typeof arr[i] === 'number'){
+//             console.log("index " + i)
+//             console.log("Number " +arr[i] * i)
+//         }
+//     }
+    
+//     arr.forEach(function(num, index){
+//         if(typeof num === 'number'){
+//             console.log(`Index `+index)
+//             console.log(`Number `+num * index)
+//         }
+//     })
+    
+
+// // 4.10. Tik tuos skaičius (number tipo duomenis), kuriuos padauginus iš 5, atsakymas gaunasi didesnis už 350.
+
+// for(let i = 0; i < arr.length; i++){
+//     let item = arr[i];
+//     if (typeof arr[i] === 'number' && item * 5 > 350){
+//         console.log("Number " + item + ". Result after multiplying by 5: " +(item * 5))
+//     }
+// }
+
+
+// let multi5BiggerThan350 = arr.map(function(num){
+//     return typeof num === 'number' && num * 5 > 350 ? num : null
+// })
+// console.log(multi5BiggerThan350.filter(Boolean));
+
+// let BiggerThan350 = [];
+// arr.forEach(function(num) {
+//     if (typeof num === 'number' && num * 5 > 350) {
+//         BiggerThan350.push(num);
+//     }
+// });
+// console.log(BiggerThan350);
+
 // 4.11. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti kiek simbolių jis turi, pvz. "Start has 5 symbols".
+
+
+
 // 4.12. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio raidę išskiriant brūkšniu ir paverčiant ją didžiąja raide, pvz.: "S-T-A-R-T".
 // 4.13. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio pirmą ir trečią raidę pakeičiant brūkšniu (underscore), pvz.: "_t_rt";
 // 4.14. Tik tekstą (string tipo duomenis), tačiau žodį parašant atvirkščiai, pvz.: vietoje "start" parašyti "trats";
